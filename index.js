@@ -1,6 +1,5 @@
 const { create, Client } = require('@open-wa/wa-automate');
 const helper = require('locutus/php/funchand');
-const commands = require('./constants/command');
 const output = require('./functions/output');
 const messages = require('./constants/messages');
 const handler = require('./functions/handler');
