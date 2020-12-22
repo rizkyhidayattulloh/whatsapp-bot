@@ -223,7 +223,7 @@ module.exports = {
     },
     convertPdf: async function (client, message) {
         if (message.quotedMsgObj.type == 'document') {
-            const tmp = 'tmp-file/';
+            const tmp = './tmp-file/';
             const file = message.quotedMsgObj;
             const findExt = file.filename.lastIndexOf('.');
             const ext = file.filename.substring(findExt);
