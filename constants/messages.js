@@ -17,6 +17,7 @@ Gunakan prefix [!]:
 • wikipedia [text]
 • reportbug [text]
 • suggestion [text]
+• gachawaifu
 
 *Info*
 
