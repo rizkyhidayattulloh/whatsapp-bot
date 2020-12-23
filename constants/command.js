@@ -130,6 +130,14 @@ module.exports = [
         ownerOnly: true
     },
     {
+        keyword: ['gachawaifu', 'waifu'],
+        private: true,
+        group: true,
+        params: false,
+        callback: 'gachaWaifu',
+        ownerOnly: false
+    },
+    {
         keyword: ['wiki', 'wikipedia'],
         private: true,
         group: true,

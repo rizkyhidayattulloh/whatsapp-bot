@@ -407,5 +407,10 @@ module.exports = {
         axios.get(`${link}/api/wiki?q=${params}`).then((res) => {
             client.reply(message.from, res.data.result.replace('\n\nby: ArugaZ', ''), message.id);
         });
+    },
+    gachaWaifu: function(client, message) {
+        axios.get(`${link}/api/waifu`).then((res) => {
+            client.sendFileFromUrl(message.from, res.data.result.image, '', '', message.id);
+        });
     }
 };
