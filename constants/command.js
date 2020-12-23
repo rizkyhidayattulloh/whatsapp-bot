@@ -121,14 +121,14 @@ module.exports = [
         callback: 'schedule',
         ownerOnly: false
     },
-    // {
-    //     keyword: 'brainly',
-    //     private: true,
-    //     group: true,
-    //     params: true,
-    //     callback: 'brainly',
-    //     ownerOnly: false
-    // },
+    {
+        keyword: 'brainly',
+        private: true,
+        group: true,
+        params: true,
+        callback: 'brainly',
+        ownerOnly: true
+    },
     {
         keyword: ['wiki', 'wikipedia'],
         private: true,
