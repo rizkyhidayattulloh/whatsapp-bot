@@ -410,7 +410,7 @@ module.exports = {
     },
     gachaWaifu: function(client, message) {
         axios.get(`${link}/api/waifu`).then((res) => {
-            client.sendFileFromUrl(message.from, res.data.result.image, '', '', message.id);
+            client.sendFileFromUrl(message.from, res.data.image, '', '', message.id);
         });
     }
 };
