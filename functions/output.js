@@ -12,6 +12,7 @@ const ytdl = require('ytdl-core');
 const base64 = require('base64topdf');
 const BrainlySearch = require('../lib/brainly');
 const link = 'https://arugaz.herokuapp.com';
+const rizky = 'https://rizzkun.herokuapp.com/public'
 
 module.exports = {
     test: function (client, message) {
@@ -373,33 +374,8 @@ module.exports = {
         client
             .reply(message.from, messages.loading, message.id)
             .then(async () => {
-                await BrainlySearch(params, function (results) {
-                    if (results.length !== 0) {
-                        results.forEach((result) => {
-                            if (result.jawaban.fotoJawaban.length == 0) {
-                                client.reply(
-                                    message.from,
-                                    stringMaker.brainly(
-                                        result.pertanyaan,
-                                        result.jawaban.judulJawaban
-                                    ),
-                                    message.id
-                                );
-                            } else {
-                                client.reply(
-                                    message.from,
-                                    stringMaker.brainly(
-                                        result.pertanyaan,
-                                        result.jawaban.judulJawaban,
-                                        jawaban.fotoJawaban.join('\n')
-                                    ),
-                                    message.id
-                                );
-                            }
-                        });
-                    } else {
-                        client.reply(message.from, 'Maaf jawaban tidak tersedia', message.id);
-                    }
+                axios.get(`${rizky}/api/brainly?query=${params}`).then((res) => {
+                    console.log(res);
                 });
             });
     },
