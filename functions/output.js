@@ -375,7 +375,22 @@ module.exports = {
             .reply(message.from, messages.loading, message.id)
             .then(async () => {
                 axios.get(`${rizky}/api/brainly?query=${params}`).then((res) => {
-                    console.log(res);
+                    let results = res.data.data;
+
+                    if (results.length > 0) {
+                        results.forEach((result) => {
+                            client.reply(
+                                message.from,
+                                stringMaker.brainly(
+                                    result.question,
+                                    result.answer
+                                ),
+                                message.id
+                            );
+                        });
+                    } else {
+                        client.reply(message.from, 'Maaf hasil tidak dapat ditemukan', message.id);
+                    }
                 });
             });
     },
