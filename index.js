@@ -18,15 +18,12 @@ function start(client) {
     });
 
     client.onMessage(async (message) => {
-        let chats = '';
-
-        if (type in message) {
-            chats = message.type === 'chat'
+        const chats =
+            message.type === 'chat'
                 ? message.body
                 : message.type === 'image' || message.type === 'video'
                     ? message.caption
                     : '';
-        }
 
         // handler.badWord(chats, client, message);
 
