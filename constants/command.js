@@ -50,7 +50,7 @@ module.exports = [
         ownerOnly: false
     },
     {
-        keyword: 'csscsac',
+        keyword: 'write',
         private: true,
         group: true,
         params: true,
@@ -130,7 +130,7 @@ module.exports = [
         ownerOnly: false
     },
     {
-        keyword: 'asdasdascsa',
+        keyword: ['gachawaifu', 'waifu'],
         private: true,
         group: true,
         params: false,
@@ -138,7 +138,7 @@ module.exports = [
         ownerOnly: false
     },
     {
-        keyword: 'asdascced',
+        keyword: ['wiki', 'wikipedia'],
         private: true,
         group: true,
         params: true,
