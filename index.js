@@ -18,10 +18,10 @@ function start(client) {
     });
 
     client.onMessage(async (message) => {
-        const chats = '';
+        let chats = '';
 
         if (type in message) {
-            message.type === 'chat'
+            chats = message.type === 'chat'
                 ? message.body
                 : message.type === 'image' || message.type === 'video'
                     ? message.caption
