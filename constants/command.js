@@ -50,7 +50,7 @@ module.exports = [
         ownerOnly: false
     },
     {
-        keyword: 'write',
+        keyword: 'csscsac',
         private: true,
         group: true,
         params: true,
@@ -122,12 +122,12 @@ module.exports = [
         ownerOnly: false
     },
     {
-        keyword: 'brainly',
+        keyword: 'cdsdvdsve',
         private: true,
         group: true,
         params: true,
         callback: 'brainly',
-        ownerOnly: true
+        ownerOnly: false
     },
     {
         keyword: 'asdasdascsa',
