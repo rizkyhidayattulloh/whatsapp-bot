@@ -18,6 +18,7 @@ Gunakan prefix [!]:
 • reportbug [text]
 • suggestion [text]
 • gachawaifu
+• lyric [judul lagu]
 
 *Info*
 

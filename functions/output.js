@@ -403,5 +403,12 @@ module.exports = {
         axios.get(`${link}/api/waifu`).then((res) => {
             client.sendFileFromUrl(message.from, res.data.image, '', '', message.id);
         });
+    },
+    lyric: async function(client, message, params) {
+        client.reply(message.from, messages.loading, message.id).then(async () => {
+            axios.get(`${link}/api/lirik?judul=${params}`).then((res) => {
+                client.reply(message.from, res.data.result, message.from)
+            });
+        })
     }
 };

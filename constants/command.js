@@ -146,6 +146,14 @@ module.exports = [
         ownerOnly: false
     },
     {
+        keyword: ['lirik', 'lyric'],
+        private: true,
+        group: true,
+        params: true,
+        callback: 'lyric',
+        ownerOnly: false
+    },
+    {
         keyword: ['broadcast', 'bc'],
         private: true,
         group: true,
