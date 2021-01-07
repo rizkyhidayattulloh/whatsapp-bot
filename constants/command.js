@@ -154,6 +154,14 @@ module.exports = [
         ownerOnly: false
     },
     {
+        keyword: 'translate',
+        private: true,
+        group: true,
+        params: true,
+        callback: 'translate',
+        ownerOnly: false
+    },
+    {
         keyword: ['broadcast', 'bc'],
         private: true,
         group: true,

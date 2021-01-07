@@ -12,7 +12,8 @@ const ytdl = require('ytdl-core');
 const base64 = require('base64topdf');
 const BrainlySearch = require('../lib/brainly');
 const link = 'https://arugaz.herokuapp.com';
-const rizky = 'https://rizzkun.herokuapp.com/public'
+const rizky = 'https://rizzkun.herokuapp.com/public';
+const translate = require('../lib/translate');
 
 module.exports = {
     test: function (client, message) {
@@ -412,5 +413,18 @@ module.exports = {
                 client.reply(message.from, messages.error, message.id);
             });
         })
+    },
+    translate: async function(client, message, params) {
+        const lang = params.slice(0, 2);
+        const text = params.slice(3);
+
+        client.reply(message.from, messages.loading, message.id).then(async () => {
+            translate(text, lang).then((result) => {
+                client.reply(message.from, result, message.id);
+            }).catch((err) => {
+                client.reply(message.from, 'Kode bahasa salah atau server bermasalah', message.id);
+                // console.log(err);
+            })
+        });
     }
 };
