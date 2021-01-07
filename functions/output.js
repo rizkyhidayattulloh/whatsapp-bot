@@ -407,7 +407,7 @@ module.exports = {
     lyric: async function(client, message, params) {
         client.reply(message.from, messages.loading, message.id).then(async () => {
             axios.get(`${link}/api/lirik?judul=${params}`).then((res) => {
-                client.reply(message.from, res.data.result, message.from)
+                client.reply(message.from, res.data.result, message.id)
             });
         })
     }
