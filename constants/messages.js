@@ -110,5 +110,6 @@ contoh penggunaan : !wikipedia suharto
     commandNotAllowed: 'Maaf, perintah ini hanya untuk owner',
     greeting: 'Halo, ketik !menu untuk membuka menu \nketik !help untuk bantuan',
     onlyGroup: 'Maaf, perintah ini hanya dapat digunakan di dalam grup',
-    onlyPrivate: 'Maaf, perintah ini hanya dapat digunakan di personal chat'
+    onlyPrivate: 'Maaf, perintah ini hanya dapat digunakan di personal chat',
+    error: "Maaf ada kesalahan atau data tidak ditemukan"
 };
