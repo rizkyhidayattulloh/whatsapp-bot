@@ -9,6 +9,7 @@ const writeFile = require('write-file-utf8');
 const convertPdf = require('../lib/convertPdf');
 const stringMaker = require('../lib/string-maker');
 const ytdl = require('ytdl-core');
+const yt = require('../lib/yt');
 const base64 = require('base64topdf');
 const BrainlySearch = require('../lib/brainly');
 const link = 'https://arugaz.herokuapp.com';
@@ -429,30 +430,12 @@ module.exports = {
     },
     ytMp3: async function(client, message, params) {
         client.reply(message.from, messages.loading, message.id).then(async () => {
-            const isValidVideo = ytdl.validateURL(params);
-            const maxDuration  = 600000; // 10 mnt
-    
-            if (isValidVideo) {
-                const info = await ytdl.getInfo(params);
-                const format = ytdl.chooseFormat(info.formats, { quality: 'lowestaudio' });
-                const videoId = ytdl.getURLVideoID(params);
-                const fileName = videoId + '.mp3';
-                const path = './tmp-file/';
-    
-                if (format.approxDurationMs < maxDuration) {
-                    if (!fs.existsSync(path + fileName)) {
-                        ytdl(params, { quality: 'lowestaudio' })
-                            .pipe(fs.createWriteStream(path + fileName)).then(() => {
-                                client.sendFile(message.from, path + fileName, '', '', message.id);
-                            });
-                    } else {
-                        client.sendFile(message.from, path + fileName, '', '', message.id);
-                    }
-                } else {
-                    client.reply(message.from, 'Durasi maksimal 10 menit', message.id);
-                }
+            const result = await yt(params);
+
+            if (result.includes('tmp-file')) {
+                client.sendFile(message.from, result, '', '', message.id);
             } else {
-                client.reply(message.from, 'Link tidak valid atau video tidak tersedia', message.id);
+                client.reply(message.from, result, message.id);
             }
         });
     }
