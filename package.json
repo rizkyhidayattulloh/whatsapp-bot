@@ -23,7 +23,7 @@
         "washyourmouthoutwithsoap": "^1.0.2",
         "write-file-utf8": "^2.0.1",
         "youtube-mp3-downloader": "^0.7.6",
-        "ytdl-core": "^4.1.4",
+        "ytdl-core": "^4.4.1",
         "zapoj-office-to-pdf": "^1.0.1"
     }
 }
