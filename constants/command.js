@@ -162,7 +162,7 @@ module.exports = [
         ownerOnly: false
     },
     {
-        keyword: 'translate',
+        keyword: ['translate', 'tl'],
         private: true,
         group: true,
         params: true,

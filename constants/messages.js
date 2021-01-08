@@ -4,21 +4,22 @@ Gunakan prefix [!]:
 
 *Perintah Dasar*
 
-• everyone, tagall (in group only)
-• leave, bye (in group only)
-• join [group lnvitation link]
+• everyone
+• leave
+• join
 • sticker: 
-    - sticker [image]
-    - stickerlow [image]
-    - stickergif [video]
-• write [text]
-• convertpdf [reply document message (.docx, .pptx, .xlsx)]
-• brainly [text]
-• wikipedia [text]
-• reportbug [text]
-• suggestion [text]
+    - sticker
+    - stickerlow
+    - stickergif
+• write
+• convertpdf
+• wikipedia
+• reportbug
+• suggestion
 • gachawaifu
-• lyric [judul lagu]
+• lyric
+• translate
+• ytmp3
 
 *Info*
 
@@ -83,11 +84,18 @@ contoh penggunaan : !join [group link]
 - schedule (untuk melihat jadwal bot)
 contoh penggunaan : !schedule
 
-- brainly (untuk mencari jawaban di brainly)
-contoh penggunaan : !brainly kenapa keqing dan barbara wangi ?
-
 - wikipedia (untuk mencari informasi di wikipedia)
 contoh penggunaan : !wikipedia suharto
+
+- translate (untuk menerjemahkan teks)
+format penggunaan : !translate [kode bahasa] [text]
+contoh penggunaan : 
+!translate en yang punya ganteng
+
+- ytmp3 (untuk download youtube dengan format audio)
+format penggunaan : !ytmp3 [link video] 
+contoh penggunaan : 
+!ytmp3 https://www.youtube.com/watch?v=BfrBmOqN-Aw
 `,
     donate: `*<---Donate--->*
 
