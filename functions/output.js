@@ -441,11 +441,11 @@ module.exports = {
     
                 if (format.approxDurationMs < maxDuration) {
                     if (!fs.existsSync(path + fileName)) {
-                        ytdl('https://youtu.be/aqz-KE-bpKQ', { quality: 'lowestaudio' })
+                        ytdl(params, { quality: 'lowestaudio' })
                             .pipe(fs.createWriteStream(path + fileName));
                     }
     
-                    client.sendAudio(message.from, path + fileName, message.id);
+                    client.sendFile(message.from, path + fileName, '', '', message.id);
                 } else {
                     client.reply(message.from, 'Durasi maksimal 10 menit', message.id);
                 }
