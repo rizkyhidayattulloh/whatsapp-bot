@@ -426,5 +426,32 @@ module.exports = {
                 // console.log(err);
             })
         });
+    },
+    ytMp3: async function(client, message, params) {
+        client.reply(message.from, messages.loading, message.id).then(async () => {
+            const isValidVideo = ytdl.validateURL(params);
+            const maxDuration  = 600000; // 10 mnt
+    
+            if (isValidVideo) {
+                const info = await ytdl.getInfo(params);
+                const format = ytdl.chooseFormat(info.formats, { quality: 'lowestaudio' });
+                const videoId = ytdl.getURLVideoID(params);
+                const fileName = videoId + '.mp3';
+                const path = './tmp-file/';
+    
+                if (format.approxDurationMs < maxDuration) {
+                    if (!fs.existsSync(path + fileName)) {
+                        ytdl('https://youtu.be/aqz-KE-bpKQ', { quality: 'lowestaudio' })
+                            .pipe(fs.createWriteStream(path + fileName));
+                    }
+    
+                    client.sendAudio(message.from, path + fileName, message.id);
+                } else {
+                    client.reply(message.from, 'Durasi maksimal 10 menit', message.id);
+                }
+            } else {
+                client.reply(message.from, 'Link tidak valid atau video tidak tersedia', message.id);
+            }
+        });
     }
 };

@@ -106,6 +106,14 @@ module.exports = [
         ownerOnly: false
     },
     {
+        keyword: 'ytmp3',
+        private: true,
+        group: true,
+        params: true,
+        callback: 'ytMp3',
+        ownerOnly: false
+    },
+    {
         keyword: ['stickergif', 'stikergif'],
         private: true,
         group: true,
