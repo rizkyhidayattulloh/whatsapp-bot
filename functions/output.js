@@ -442,10 +442,12 @@ module.exports = {
                 if (format.approxDurationMs < maxDuration) {
                     if (!fs.existsSync(path + fileName)) {
                         ytdl(params, { quality: 'lowestaudio' })
-                            .pipe(fs.createWriteStream(path + fileName));
+                            .pipe(fs.createWriteStream(path + fileName)).then(() => {
+                                client.sendFile(message.from, path + fileName, '', '', message.id);
+                            });
+                    } else {
+                        client.sendFile(message.from, path + fileName, '', '', message.id);
                     }
-    
-                    client.sendFile(message.from, path + fileName, '', '', message.id);
                 } else {
                     client.reply(message.from, 'Durasi maksimal 10 menit', message.id);
                 }
