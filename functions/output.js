@@ -440,17 +440,10 @@ module.exports = {
         client.reply(message.from, messages.lang, message.id);
     },
     totalChat: async function(client, message) {
-        let chatIds = await client.getAllChatIds();
-        let pc = chatIds.length;
-        let gc = 0;
-
-        for (let chatId of chatIds) {
-            let chat = await client.getChatById(chatId);
-
-            if (chat.isGroup && !chat.isReadOnly)
-                gc += 1;
-                pc -= 1;
-        }
+        let totalChats = await client.getAllChatIds();
+        let groupChats = await client.getAllGroups();
+        let pc = totalChats.length - groupChats.length;
+        let gc = groupChats.length;
 
         client.reply(message.from, stringMaker.totalChat(pc, gc), message.id);
     }
