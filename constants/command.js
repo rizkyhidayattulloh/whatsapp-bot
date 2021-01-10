@@ -211,9 +211,9 @@ module.exports = [
     },
     {
         keyword: ['totalchat', 'tc'],
-        private: false,
+        private: true,
         group: true,
-        params: true,
+        params: false,
         callback: 'totalChat',
         ownerOnly: true
     },
