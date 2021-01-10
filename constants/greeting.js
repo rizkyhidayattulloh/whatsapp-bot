@@ -2,5 +2,9 @@ module.exports = [
     'halo',
     'p',
     'bot',
-    'woi'
+    'woi',
+    'hai',
+    'assalamualaikum',
+    'oi',
+    'hay'
 ];

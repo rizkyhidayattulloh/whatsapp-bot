@@ -28,6 +28,7 @@ Gunakan prefix [!]:
 • owner
 • donate
 • schedule
+• lang
 
 *Bot masih dalam tahap pengembangan, jika menemukan bug atau punya ide untuk fitur baru maupun saran, jangan sungkan untuk memberi tahu owner saya ^^*
 
@@ -108,6 +109,14 @@ contoh penggunaan :
 *@paytorizz*
 
 *TERIMAKASIH YANG SUDAH MENDONASIKAN SEDIKIT REZEKI KEPADA OWNER SAYA ^^*`,
+    lang: `<---Kode Bahasa--->
+    
+Arab      | ar
+Jepang    | ja
+Korea     | ko
+Indonesia | id
+Inggris   | en
+Rusia     | ru`,
     commandNotAvailable: 'Maaf paduka, command tidak ada \nKetik !menu untuk melihat menu \nKetik !suggestion untuk memberikan saran',
     badWord: 'Ke pasar beli tongkol \nPunya mulut dijaga tolol!!',
     loading: 'Processing request',

@@ -170,6 +170,14 @@ module.exports = [
         ownerOnly: false
     },
     {
+        keyword: 'lang',
+        private: true,
+        group: true,
+        params: false,
+        callback: 'lang',
+        ownerOnly: false
+    },
+    {
         keyword: ['broadcast', 'bc'],
         private: true,
         group: true,

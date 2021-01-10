@@ -422,7 +422,6 @@ module.exports = {
                 client.reply(message.from, result, message.id);
             }).catch((err) => {
                 client.reply(message.from, 'Kode bahasa salah atau server bermasalah', message.id);
-                // console.log(err);
             })
         });
     },
@@ -431,10 +430,13 @@ module.exports = {
             const result = await yt(params);
 
             if (result.includes('tmp-file')) {
-                client.sendAudio(message.from, result, message.id);
+                client.sendFile(message.from, result, 'music.mp3', '',  message.id);
             } else {
                 client.reply(message.from, result, message.id);
             }
         });
-    }
+    },
+    lang: function(client, message) {
+        client.reply(message.from, messages.lang, message.id);
+    },
 };
