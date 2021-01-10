@@ -111,12 +111,12 @@ contoh penggunaan :
 *TERIMAKASIH YANG SUDAH MENDONASIKAN SEDIKIT REZEKI KEPADA OWNER SAYA ^^*`,
     lang: `<---Kode Bahasa--->
     
-Arab      | ar
-Jepang    | ja
-Korea     | ko
+Arab | ar
+Jepang | ja
+Korea | ko
 Indonesia | id
-Inggris   | en
-Rusia     | ru`,
+Inggris | en
+Rusia | ru`,
     commandNotAvailable: 'Maaf paduka, command tidak ada \nKetik !menu untuk melihat menu \nKetik !suggestion untuk memberikan saran',
     badWord: 'Ke pasar beli tongkol \nPunya mulut dijaga tolol!!',
     loading: 'Processing request',
