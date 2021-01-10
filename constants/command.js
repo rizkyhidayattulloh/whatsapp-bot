@@ -1,6 +1,4 @@
 module.exports = [
-    // { keyword: 'test', private: true,
-    // group: true, callback: 'test', params: false },
     {
         keyword: ['everyone', 'tagall', 'tegal'],
         private: false,
@@ -8,6 +6,7 @@ module.exports = [
         params: false,
         callback: 'everyone',
         ownerOnly: false,
+        active: true
     },
     {
         keyword: 'owner',
@@ -16,6 +15,7 @@ module.exports = [
         params: false,
         callback: 'owner',
         ownerOnly: false,
+        active: true
     },
     {
         keyword: ['sticker', 'stiker'],
@@ -23,7 +23,8 @@ module.exports = [
         group: true,
         params: false,
         callback: 'sticker',
-        ownerOnly: false
+        ownerOnly: false,
+        active: true
     },
     {
         keyword: 'stickerlow',
@@ -31,7 +32,8 @@ module.exports = [
         group: true,
         params: false,
         callback: 'stickerLow',
-        ownerOnly: false
+        ownerOnly: false,
+        active: true
     },
     {
         keyword: ['menu', 'list'],
@@ -39,7 +41,8 @@ module.exports = [
         group: true,
         params: false,
         callback: 'menu',
-        ownerOnly: false
+        ownerOnly: false,
+        active: true
     },
     {
         keyword: ['leave', 'bye'],
@@ -47,7 +50,8 @@ module.exports = [
         group: true,
         params: false,
         callback: 'leave',
-        ownerOnly: false
+        ownerOnly: false,
+        active: true
     },
     {
         keyword: 'write',
@@ -55,7 +59,8 @@ module.exports = [
         group: true,
         params: true,
         callback: 'write',
-        ownerOnly: false
+        ownerOnly: false,
+        active: false
     },
     {
         keyword: 'convertpdf',
@@ -63,7 +68,8 @@ module.exports = [
         group: true,
         params: false,
         callback: 'convertPdf',
-        ownerOnly: false
+        ownerOnly: false,
+        active: true
     },
     {
         keyword: 'join',
@@ -71,7 +77,8 @@ module.exports = [
         group: true,
         params: true,
         callback: 'joinGroup',
-        ownerOnly: false
+        ownerOnly: false,
+        active: true
     },
     {
         keyword: ['reportbug', 'report', 'bug'],
@@ -79,7 +86,8 @@ module.exports = [
         group: false,
         params: true,
         callback: 'report',
-        ownerOnly: false
+        ownerOnly: false,
+        active: true
     },
     {
         keyword: ['requestfeature', 'newfeature', 'suggestion'],
@@ -87,7 +95,8 @@ module.exports = [
         group: false,
         params: true,
         callback: 'requestFeature',
-        ownerOnly: false
+        ownerOnly: false,
+        active: true
     },
     {
         keyword: 'help',
@@ -95,7 +104,8 @@ module.exports = [
         group: true,
         params: false,
         callback: 'help',
-        ownerOnly: false
+        ownerOnly: false,
+        active: true
     },
     {
         keyword: 'donate',
@@ -103,7 +113,8 @@ module.exports = [
         group: true,
         params: false,
         callback: 'donate',
-        ownerOnly: false
+        ownerOnly: false,
+        active: true
     },
     {
         keyword: 'ytmp3',
@@ -111,7 +122,8 @@ module.exports = [
         group: true,
         params: true,
         callback: 'ytMp3',
-        ownerOnly: false
+        ownerOnly: false,
+        active: true
     },
     {
         keyword: ['stickergif', 'stikergif'],
@@ -119,7 +131,8 @@ module.exports = [
         group: true,
         params: false,
         callback: 'stickerGif',
-        ownerOnly: false
+        ownerOnly: false,
+        active: true
     },
     {
         keyword: ['info', 'ingfo', 'schedule', 'jadwal'],
@@ -127,15 +140,17 @@ module.exports = [
         group: true,
         params: false,
         callback: 'schedule',
-        ownerOnly: false
+        ownerOnly: false,
+        active: true
     },
     {
-        keyword: 'cdsdvdsve',
+        keyword: 'brainly',
         private: true,
         group: true,
         params: true,
         callback: 'brainly',
-        ownerOnly: false
+        ownerOnly: false,
+        active: false
     },
     {
         keyword: ['gachawaifu', 'waifu'],
@@ -143,7 +158,8 @@ module.exports = [
         group: true,
         params: false,
         callback: 'gachaWaifu',
-        ownerOnly: false
+        ownerOnly: false,
+        active: false
     },
     {
         keyword: ['wiki', 'wikipedia'],
@@ -151,7 +167,8 @@ module.exports = [
         group: true,
         params: true,
         callback: 'wikipedia',
-        ownerOnly: false
+        ownerOnly: false,
+        active: false
     },
     {
         keyword: ['lirik', 'lyric'],
@@ -159,7 +176,8 @@ module.exports = [
         group: true,
         params: true,
         callback: 'lyric',
-        ownerOnly: false
+        ownerOnly: false,
+        active: false
     },
     {
         keyword: ['translate', 'tl'],
@@ -167,23 +185,17 @@ module.exports = [
         group: true,
         params: true,
         callback: 'translate',
-        ownerOnly: false
+        ownerOnly: false,
+        active: true
     },
-    // {
-    //     keyword: 'unsend',
-    //     private: true,
-    //     group: true,
-    //     params: false,
-    //     callback: 'unsend',
-    //     ownerOnly: false
-    // },
     {
         keyword: 'lang',
         private: true,
         group: true,
         params: false,
         callback: 'lang',
-        ownerOnly: false
+        ownerOnly: false,
+        active: true
     },
     {
         keyword: ['broadcast', 'bc'],
@@ -191,7 +203,8 @@ module.exports = [
         group: true,
         params: true,
         callback: 'broadcast',
-        ownerOnly: true
+        ownerOnly: true,
+        active: true
     },
     {
         keyword: 'broadcastall',
@@ -199,7 +212,8 @@ module.exports = [
         group: true,
         params: true,
         callback: 'broadcastAll',
-        ownerOnly: true
+        ownerOnly: true,
+        active: true
     },
     {
         keyword: 'sendto',
@@ -207,7 +221,8 @@ module.exports = [
         group: true,
         params: true,
         callback: 'sendTo',
-        ownerOnly: true
+        ownerOnly: true,
+        active: true
     },
     {
         keyword: ['totalchat', 'tc'],
@@ -215,12 +230,7 @@ module.exports = [
         group: true,
         params: false,
         callback: 'totalChat',
-        ownerOnly: true
+        ownerOnly: true,
+        active: true
     },
-    // {
-    //     keyword: 'translate',
-    //     private: true,
-    //     params: true,
-    //     callback: 'translate',
-    // },
 ];

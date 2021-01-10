@@ -128,5 +128,6 @@ Rusia | ru`,
     greeting: 'Halo, ketik !menu untuk membuka menu \nketik !help untuk bantuan',
     onlyGroup: 'Maaf, perintah ini hanya dapat digunakan di dalam grup',
     onlyPrivate: 'Maaf, perintah ini hanya dapat digunakan di personal chat',
-    error: "Maaf ada kesalahan atau data tidak ditemukan"
+    error: "Maaf ada kesalahan atau data tidak ditemukan",
+    off: "Fitur ini sedang di takedown oleh owner dan tidak dapat digunakan"
 };

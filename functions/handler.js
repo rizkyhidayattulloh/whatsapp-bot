@@ -49,6 +49,12 @@ module.exports = {
                         );
                     }
                 }
+
+                if (!command.active) {
+                    result.status = false;
+
+                    client.reply(message.from, messages.off, message.id);
+                }
         
                 if (command.params === true && input.param === '') {
                     result.status = false;
