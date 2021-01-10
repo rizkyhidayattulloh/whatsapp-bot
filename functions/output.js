@@ -401,7 +401,7 @@ module.exports = {
     },
     gachaWaifu: function(client, message) {
         axios.get(`${link}/api/waifu`).then((res) => {
-            client.sendFileFromUrl(message.from, res.data.image, '', '', message.id);
+            client.sendFileFromUrl(message.from, res.data.image, '', `Char name : ${res.data.name}`, message.id);
         });
     },
     lyric: async function(client, message, params) {
@@ -439,4 +439,22 @@ module.exports = {
     lang: function(client, message) {
         client.reply(message.from, messages.lang, message.id);
     },
+    totalChat: function(client, message) {
+        let chatIds = await client.getAllChatIds();
+        let pc = chatIds.length;
+        let gc = 0;
+
+        for (let chatId of chatIds) {
+            let chat = await client.getChatById(chatId);
+
+            if (chat.isGroup && !chat.isReadOnly)
+                gc += 1;
+                pc -= 1;
+        }
+
+        client.reply(message.from, stringMaker.totalChat(pc, gc), message.id);
+    }
+    // unsend: function(client, message) {
+    //     client.deleteMessage(message.from, )
+    // }
 };

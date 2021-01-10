@@ -169,6 +169,14 @@ module.exports = [
         callback: 'translate',
         ownerOnly: false
     },
+    // {
+    //     keyword: 'unsend',
+    //     private: true,
+    //     group: true,
+    //     params: false,
+    //     callback: 'unsend',
+    //     ownerOnly: false
+    // },
     {
         keyword: 'lang',
         private: true,
@@ -199,6 +207,14 @@ module.exports = [
         group: true,
         params: true,
         callback: 'sendTo',
+        ownerOnly: true
+    },
+    {
+        keyword: ['totalchat', 'tc'],
+        private: false,
+        group: true,
+        params: true,
+        callback: 'totalChat',
         ownerOnly: true
     },
     // {
