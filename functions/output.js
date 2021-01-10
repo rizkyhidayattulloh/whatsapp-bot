@@ -439,7 +439,7 @@ module.exports = {
     lang: function(client, message) {
         client.reply(message.from, messages.lang, message.id);
     },
-    totalChat: function(client, message) {
+    totalChat: async function(client, message) {
         let chatIds = await client.getAllChatIds();
         let pc = chatIds.length;
         let gc = 0;
