@@ -198,11 +198,29 @@ module.exports = [
         active: true
     },
     {
+        keyword: 'leaderboard',
+        private: true,
+        group: true,
+        params: false,
+        callback: 'leaderboard',
+        ownerOnly: false,
+        active: true
+    },
+    {
         keyword: ['broadcast', 'bc'],
         private: true,
         group: true,
         params: true,
         callback: 'broadcast',
+        ownerOnly: true,
+        active: true
+    },
+    {
+        keyword: ['updateleaderboard', 'ul'],
+        private: true,
+        group: true,
+        params: true,
+        callback: 'updateLeaderboard',
         ownerOnly: true,
         active: true
     },

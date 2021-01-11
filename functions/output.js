@@ -446,6 +446,27 @@ module.exports = {
         let gc = groupChats.length;
 
         client.reply(message.from, stringMaker.totalChat(pc, gc), message.id);
+    },
+    updateLeaderboard: async function(client, message, params) {
+        let leaderboard = {
+            text: `${params}`
+        }
+
+        let data = JSON.stringify(leaderboard);
+
+        fs.writeFileSync('leaderboard.json', data).then((res) => {
+            client.reply(message.from, 'Sukses mengupdate leaderboard', message.id);
+        }).catch((err) => {
+            client.reply(message.from, 'Gagal mengupdate leaderboard', message.id)
+        });
+    },
+    leaderboard: function(client, message) {
+        fs.readFile('leaderboard.json', (err, data) => {
+            if (err) client.reply(message.from, 'Ada yang eror', message.id);
+            let leaderboard = JSON.parse(data);
+            
+            client.reply(message.from, stringMaker.leaderboard(leaderboard.text), message.id);
+        });
     }
     // unsend: function(client, message) {
     //     client.deleteMessage(message.from, )
