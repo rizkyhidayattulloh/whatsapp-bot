@@ -198,6 +198,15 @@ module.exports = [
         active: true
     },
     {
+        keyword: 'ytsearch',
+        private: true,
+        group: true,
+        params: true,
+        callback: 'ytSearch',
+        ownerOnly: true,
+        active: true
+    },
+    {
         keyword: 'leaderboard',
         private: true,
         group: true,

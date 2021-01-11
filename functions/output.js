@@ -10,7 +10,7 @@ const convertPdf = require('../lib/convertPdf');
 const stringMaker = require('../lib/string-maker');
 const yt = require('../lib/yt');
 const BrainlySearch = require('../lib/brainly');
-const link = 'https://arugaz.herokuapp.com';
+const link = 'https://arugaz.my.id/api';
 const rizky = 'https://rizzkun.herokuapp.com/public';
 const translate = require('../lib/translate');
 
@@ -464,6 +464,17 @@ module.exports = {
             let leaderboard = JSON.parse(data);
             
             client.reply(message.from, stringMaker.leaderboard(leaderboard.text), message.id);
+        });
+    },
+    ytSearch: async function(client, message, params) {
+        axios.get(`${link}/media/ytsearch?query=${params}`).then((res) => {
+            if (res.data.result.length > 0) {
+                client.reply(message.from, stringMaker.ytSearch(res.data.result), message.id);
+            } else {
+                client.reply(message.from, 'Tidak dapat menemukan hasil pencarian', message.id);
+            }
+        }).catch((err) => {
+            client.reply(message.from, 'Server bermasalah', message.id);
         });
     }
     // unsend: function(client, message) {
