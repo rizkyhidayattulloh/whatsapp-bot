@@ -454,11 +454,9 @@ module.exports = {
 
         let data = JSON.stringify(leaderboard);
 
-        fs.writeFileSync('leaderboard.json', data).then((res) => {
-            client.reply(message.from, 'Sukses mengupdate leaderboard', message.id);
-        }).catch((err) => {
-            client.reply(message.from, 'Gagal mengupdate leaderboard', message.id)
-        });
+        fs.writeFileSync('leaderboard.json', data);
+
+        client.reply(message.from, 'Sukses mengupdate leaderboard', message.id);
     },
     leaderboard: function(client, message) {
         fs.readFile('leaderboard.json', (err, data) => {
