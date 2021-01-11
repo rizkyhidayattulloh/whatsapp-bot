@@ -19,7 +19,9 @@ Gunakan prefix [!]:
 • gachawaifu
 • lyric
 • translate
+• ytsearch
 • ytmp3
+• ytmp4
 
 *Info*
 
@@ -93,6 +95,11 @@ contoh penggunaan : !wikipedia suharto
 format penggunaan : !translate [kode bahasa] [text]
 contoh penggunaan : 
 !translate en yang punya ganteng
+
+- ytsearch (untuk mencari link youtube)
+format penggunaan : !ytsearch [kata kunci]
+contoh penggunaan :
+!ytsearch tuhan yang aneh
 
 - ytmp3 (untuk download youtube dengan format audio)
 format penggunaan : !ytmp3 [link video] 

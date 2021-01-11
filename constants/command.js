@@ -122,7 +122,7 @@ module.exports = [
         group: true,
         params: true,
         callback: 'ytMp3',
-        ownerOnly: true,
+        ownerOnly: false,
         active: true
     },
     {
@@ -131,7 +131,7 @@ module.exports = [
         group: true,
         params: true,
         callback: 'ytMp4',
-        ownerOnly: true,
+        ownerOnly: false,
         active: true
     },
     {
@@ -212,7 +212,7 @@ module.exports = [
         group: true,
         params: true,
         callback: 'ytSearch',
-        ownerOnly: true,
+        ownerOnly: false,
         active: true
     },
     {
