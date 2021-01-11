@@ -429,8 +429,8 @@ module.exports = {
         client.reply(message.from, messages.loading, message.id).then(async () => {
             const result = await yt(params);
 
-            if (result.includes('tmp-file')) {
-                // client.sendFile(message.from, result, 'music.mp3', '',  message.id);
+            if (result.includes('https:')) {
+                client.sendFileFromUrl(message.from, result, 'music.mp3', '', message.id);
             } else {
                 client.reply(message.from, result, message.id);
             }
