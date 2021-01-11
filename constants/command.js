@@ -122,7 +122,7 @@ module.exports = [
         group: true,
         params: true,
         callback: 'ytMp3',
-        ownerOnly: false,
+        ownerOnly: true,
         active: true
     },
     {

@@ -430,7 +430,7 @@ module.exports = {
             const result = await yt(params);
 
             if (result.includes('tmp-file')) {
-                client.sendFile(message.from, result, 'music.mp3', '',  message.id);
+                // client.sendFile(message.from, result, 'music.mp3', '',  message.id);
             } else {
                 client.reply(message.from, result, message.id);
             }
