@@ -29,6 +29,7 @@ Gunakan prefix [!]:
 • donate
 • schedule
 • lang
+• leaderboard
 
 *Bot masih dalam tahap pengembangan, jika menemukan bug atau punya ide untuk fitur baru maupun saran, jangan sungkan untuk memberi tahu owner saya ^^*
 
