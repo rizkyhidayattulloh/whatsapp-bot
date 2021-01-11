@@ -126,6 +126,15 @@ module.exports = [
         active: true
     },
     {
+        keyword: 'ytmp4',
+        private: true,
+        group: true,
+        params: true,
+        callback: 'ytMp4',
+        ownerOnly: true,
+        active: true
+    },
+    {
         keyword: ['stickergif', 'stikergif'],
         private: true,
         group: true,

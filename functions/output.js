@@ -427,10 +427,21 @@ module.exports = {
     },
     ytMp3: async function(client, message, params) {
         client.reply(message.from, messages.loading, message.id).then(async () => {
-            const result = await yt(params);
+            const result = await yt(params, 'lowestaudio');
 
             if (result.includes('https:')) {
                 client.sendFileFromUrl(message.from, result, 'music.mp3', '', message.id);
+            } else {
+                client.reply(message.from, result, message.id);
+            }
+        });
+    },
+    ytMp4: async function(client, message, params) {
+        client.reply(message.from, messages.loading, message.id).then(async () => {
+            const result = await yt(params, 'lowestvideo');
+
+            if (result.includes('https:')) {
+                client.sendFileFromUrl(message.from, result, 'video.mp4', '', message.id);
             } else {
                 client.reply(message.from, result, message.id);
             }
