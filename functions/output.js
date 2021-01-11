@@ -13,7 +13,6 @@ const BrainlySearch = require('../lib/brainly');
 const link = 'https://arugaz.my.id/api';
 const rizky = 'https://rizzkun.herokuapp.com/public';
 const translate = require('../lib/translate');
-const ytdl = require('ytdl-core');
 
 module.exports = {
     test: function (client, message) {
@@ -438,19 +437,15 @@ module.exports = {
         });
     },
     ytMp4: async function(client, message, params) {
-        const isValidVideo = ytdl.validateURL(params);
+        client.reply(message.from, messages.loading, message.id).then(async () => {
+            const result = await yt(params, '18');
 
-        if (isValidVideo) {
-            client.reply(message.from, messages.loading, message.id).then(async () => {
-                axios.get(`${link}/media/ytvideo?url=${params}`).then((res) => {
-                    client.sendFileFromUrl(message.from, res.data.result.dl_link, 'video.mp4', '', message.id);
-                }).catch((err) => {
-                    client.reply(message.from, 'Server eror', message.id);
-                });
-            });
-        } else {
-            resolve('Link tidak valid atau video tidak tersedia');
-        }
+            if (result.includes('https:')) {
+                client.sendFileFromUrl(message.from, result, 'video.mp4', '', message.id);
+            } else {
+                client.reply(message.from, result, message.id);
+            }
+        });
     },
     lang: function(client, message) {
         client.reply(message.from, messages.lang, message.id);
