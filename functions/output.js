@@ -438,7 +438,7 @@ module.exports = {
     },
     ytMp4: async function(client, message, params) {
         client.reply(message.from, messages.loading, message.id).then(async () => {
-            const result = await yt(params, 'lowestvideo');
+            const result = await yt(params, '134');
 
             if (result.includes('https:')) {
                 client.sendFileFromUrl(message.from, result, 'video.mp4', '', message.id);
