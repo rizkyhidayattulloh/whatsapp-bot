@@ -225,7 +225,25 @@ module.exports = [
         active: true
     },
     {
+        keyword: 'infopaidbc',
+        private: true,
+        group: true,
+        params: false,
+        callback: 'infoPaidBc',
+        ownerOnly: true,
+        active: true
+    },
+    {
         keyword: 'paidbc',
+        private: true,
+        group: true,
+        params: true,
+        callback: 'paidBc',
+        ownerOnly: true,
+        active: true
+    },
+    {
+        keyword: 'paidbcall',
         private: true,
         group: true,
         params: true,

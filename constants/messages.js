@@ -125,6 +125,16 @@ Korea | ko
 Indonesia | id
 Inggris | en
 Rusia | ru`,
+    infoPaidBc: `*Harga Paid Broadcast*
+    
+Broadcast group chat :
+5k
+
+Broadcast group chat + personal chat :
+15k
+
+Jika ingin paid broadcast bisa langsung chat owner dengan mengetik
+!owner untuk melihat kontak owner`,
     commandNotAvailable: 'Maaf paduka, command tidak ada \nKetik !menu untuk melihat menu \nKetik !suggestion untuk memberikan saran',
     badWord: 'Ke pasar beli tongkol \nPunya mulut dijaga tolol!!',
     loading: 'Processing request',

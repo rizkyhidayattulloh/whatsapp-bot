@@ -489,21 +489,73 @@ module.exports = {
         });
     },
     paidBc: async function(client, message, params) {
-        client.sendText(message.from, params).then(async () => {
-            if (message.quotedMsgObj != null && message.quotedMsgObj.type == 'image') {
-                const file = message.quotedMsgObj;
+        let chatIds = await client.getAllChatIds();
+        let image = false;
+        let dataImage = '';
 
-                const mediaData = await decryptMedia(file);
-                const dataImage =
-                    'data:' +
-                    file.mimetype +
-                    ';' +
-                    'base64,' +
-                    mediaData.toString('base64');
+        if (message.quotedMsgObj != null && message.quotedMsgObj.type == 'image') {
+            const file = message.quotedMsgObj;
 
-                client.sendImage(message.from, dataImage, '', '');
+            const mediaData = await decryptMedia(file);
+            dataImage =
+                'data:' +
+                file.mimetype +
+                ';' +
+                'base64,' +
+                mediaData.toString('base64');
+            
+            image = true;
+        }
+
+        for (let chatId of chatIds) {
+            let chat = await client.getChatById(chatId);
+
+            if (!chat.isReadOnly && chat.isGroup) {
+                client.sendText(chatId, stringMaker.paidBc(params)).then(() => {
+                    if (image == true) {
+                        client.sendImage(chatId, dataImage, '', '');
+                    }
+                });
             }
-        });
+        }
+
+        client.reply(message.from, 'Broadcast success paduka', message.id);
+    },
+    paidBcAll: async function(client, message, params) {
+        let chatIds = await client.getAllChatIds();
+        let image = false;
+        let dataImage = '';
+
+        if (message.quotedMsgObj != null && message.quotedMsgObj.type == 'image') {
+            const file = message.quotedMsgObj;
+
+            const mediaData = await decryptMedia(file);
+            dataImage =
+                'data:' +
+                file.mimetype +
+                ';' +
+                'base64,' +
+                mediaData.toString('base64');
+            
+            image = true;
+        }
+
+        for (let chatId of chatIds) {
+            let chat = await client.getChatById(chatId);
+
+            if (!chat.isReadOnly) {
+                client.sendText(chatId, stringMaker.paidBc(params)).then(() => {
+                    if (image == true) {
+                        client.sendImage(chatId, dataImage, '', '');
+                    }
+                });
+            }
+        }
+
+        client.reply(message.from, 'Broadcast success paduka', message.id);
+    },
+    infoPaidBc: function(client, message) {
+        client.reply(message.from, messages.infoPaidBc, message.id);
     }
     // unsend: function(client, message) {
     //     client.deleteMessage(message.from, )
