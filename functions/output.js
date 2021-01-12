@@ -499,7 +499,7 @@ module.exports = {
                         const mediaData = await decryptMedia(file);
                         const dataImage =
                             'data:' +
-                            message.mimetype +
+                            file.mimetype +
                             ';' +
                             'base64,' +
                             mediaData.toString('base64');
