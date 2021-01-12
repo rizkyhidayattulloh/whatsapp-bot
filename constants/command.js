@@ -230,7 +230,7 @@ module.exports = [
         group: true,
         params: false,
         callback: 'infoPaidBc',
-        ownerOnly: true,
+        ownerOnly: false,
         active: true
     },
     {

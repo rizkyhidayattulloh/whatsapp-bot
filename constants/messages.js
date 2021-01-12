@@ -32,6 +32,7 @@ Gunakan prefix [!]:
 • schedule
 • lang
 • leaderboard
+• infopaidbc
 
 *Bot masih dalam tahap pengembangan, jika menemukan bug atau punya ide untuk fitur baru maupun saran, jangan sungkan untuk memberi tahu owner saya ^^*
 
@@ -42,6 +43,9 @@ Jangan lupa gunakan prefix (!) untuk mengawali perintah
 
 - menu (untuk membuka menu)
 contoh penggunaan : !menu
+
+- infopaidbc (untuk membuka info paid broadcast)
+contoh penggunaan : !infopaidbc
 
 - help (untuk membuka bantuan)
 contoh penggunaan : !help
