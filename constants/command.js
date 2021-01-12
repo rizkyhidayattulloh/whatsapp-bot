@@ -225,6 +225,15 @@ module.exports = [
         active: true
     },
     {
+        keyword: 'paidbc',
+        private: true,
+        group: true,
+        params: true,
+        callback: 'paidBc',
+        ownerOnly: true,
+        active: true
+    },
+    {
         keyword: ['broadcast', 'bc'],
         private: true,
         group: true,
