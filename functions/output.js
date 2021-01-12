@@ -490,25 +490,20 @@ module.exports = {
     },
     paidBc: async function(client, message, params) {
         client.sendText(message.from, params).then(async () => {
-            if (message.quotedMsgObj.type == 'image') {
+            if (message.quotedMsgObj != null && message.quotedMsgObj.type == 'image') {
                 const file = message.quotedMsgObj;
-    
-                client
-                    .reply(message.from, messages.loading, message.id)
-                    .then(async () => {
-                        const mediaData = await decryptMedia(file);
-                        const dataImage =
-                            'data:' +
-                            file.mimetype +
-                            ';' +
-                            'base64,' +
-                            mediaData.toString('base64');
-    
-                        client.sendImage(message.from, dataImage, '', '');
-                    });
+
+                const mediaData = await decryptMedia(file);
+                const dataImage =
+                    'data:' +
+                    file.mimetype +
+                    ';' +
+                    'base64,' +
+                    mediaData.toString('base64');
+
+                client.sendImage(message.from, dataImage, '', '');
             }
         });
-
     }
     // unsend: function(client, message) {
     //     client.deleteMessage(message.from, )
