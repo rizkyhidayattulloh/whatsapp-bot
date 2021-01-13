@@ -35,27 +35,27 @@ module.exports = {
 𖠵⃕⁖➣ Note:
 ——————
 ❝Bot masih dalam tahap pengembangan, jika menemukan bug atau punya ide untuk fitur baru maupun saran, jangan sungkan untuk memberi tahu owner saya ^^
-❝Semua fitur di bot ini gratis, namun jika anda ingin mendukung pengembangannya ketik !donate untuk mendonasikan sedikit rezeki anda kepada owner saya ^^`,
+❝Semua fitur di bot ini gratis, namun jika anda ingin mendukung pengembangannya ketik *!donate* untuk mendonasikan sedikit rezeki anda kepada owner saya ^^`,
     help: `➹Command Help˘͈ᵕ˘͈
 ———————————
 
 ➤ menu (untuk membuka menu).
- *➹contoh : *!menu
+ *➹contoh :*!menu
 
 ➤ Infopaidbc (untuk membuka info paid broadcast).
- *➹contoh : *!infopaidbc
+ *➹contoh :*!infopaidbc
 
 ➤ help (untuk membuka bantuan).
- *➹contoh : *!help
+ *➹contoh :*!help
 
 ➤ owner (untuk mengirimkan kontak owner).
- *➹contoh : *!owner
+ *➹contoh :*!owner
 
 ➤ everyone (untuk tag semua anggota grup dan hanya dapat digunakan di dalam grup)
- *➹contoh : *!everyone
+ *➹contoh :*!everyone
 
 ➤ leave (untuk keluar dari grup dan ganya dapat digunakan di dalam grup).
- *➹contoh : *!leave
+ *➹contoh :*!leave
 
 ➤ sticker (untuk membuat stiker yang berasal dari gambar).
  ➹tahap penggunaan :
@@ -71,8 +71,8 @@ module.exports = {
  ⇢ kemudian kirim
 
 ➤ write (untuk mengonversi teks menjadi tulisan tangan).
- *➹format : *!write [tulis teks disini]
- *➹contoh : *!write halo
+ *➹format :*!write [tulis teks disini]
+ *➹contoh :*!write halo
 
 ➤ convertpdf (untuk mengonversi document menjadi pdf).
  ➹supported document : docx, xlsx, pptx
@@ -81,35 +81,35 @@ module.exports = {
  ⇢ reply document yang telah dikirim dengan caption !convertpdf
 
 ➤ reportbug (untuk mengirimkan laporan bug kepada owner).
- *➹format : *!reportbug [ketik bug secara detail]
- *➹contoh : *!reportbug fitur nya ngebug bang
+ *➹format :*!reportbug [ketik bug secara detail]
+ *➹contoh :*!reportbug fitur nya ngebug bang
 
 ➤ suggestion (untuk mengirimkan masukan ataupun saran fitur baru kepada owner).
- *➹format : *!suggestion [tulis saran]
- *➹contoh : *!suggestion tambah fitur dong bang
+ *➹format :*!suggestion [tulis saran]
+ *➹contoh :*!suggestion tambah fitur dong bang
 
 ➤ join (untuk join ke grup chat).
- *➹format : *!join [group link]
- *➹contoh : *!join https://chat.whatsapp.com/LNuPbVDcY1kBYgaQRCd5N0
+ *➹format :*!join [group link]
+ *➹contoh :*!join https://chat.whatsapp.com/LNuPbVDcY1kBYgaQRCd5N0
 
 ➤ schedule (untuk melihat jadwal bot).
- *➹contoh : *!schedule
+ *➹contoh :*!schedule
 
 ➤ wikipedia (untuk mencari informasi di wikipedia).
- *➹format : *!wikipedia [teks]
- *➹contoh : *!wikipedia suharto
+ *➹format :*!wikipedia [teks]
+ *➹contoh :*!wikipedia suharto
 
 ➤ translate (untuk menerjemahkan teks).
- *➹format : *!translate [kode bahasa] [text]
- *➹contoh : *!translate en yang punya ganteng
+ *➹format :*!translate [kode bahasa] [text]
+ *➹contoh :*!translate en yang punya ganteng
 
 ➤ ytsearch (untuk mencari link youtube).
- *➹format : *!ytsearch [kata kunci].
- *➹contoh : *!ytsearch tuhan yang aneh
+ *➹format :*!ytsearch [kata kunci].
+ *➹contoh :*!ytsearch tuhan yang aneh
 
 ➤ ytmp3 (untuk download youtube dengan format audio).
- *➹format : *!ytmp3 [link video youtube]
- *➹contoh : *!ytmp3 https://www.youtube.com/watch?v=BfrBmOqN-Aw`,
+ *➹format :*!ytmp3 [link video youtube]
+ *➹contoh :*!ytmp3 https://www.youtube.com/watch?v=BfrBmOqN-Aw`,
     donate: `*<---Donate--->*
 
 *DONASI BISA MELALUI :*
