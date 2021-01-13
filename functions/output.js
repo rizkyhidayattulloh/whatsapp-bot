@@ -421,7 +421,7 @@ module.exports = {
             translate(text, lang).then((result) => {
                 client.reply(message.from, result, message.id);
             }).catch((err) => {
-                client.reply(message.from, 'Kode bahasa salah atau server bermasalah', message.id);
+                client.reply(message.from, 'Kode bahasa salah, ketik !lang untuk melihat kode bahasa', message.id);
             })
         });
     },
