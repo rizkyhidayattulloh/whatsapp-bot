@@ -247,7 +247,7 @@ module.exports = [
         private: true,
         group: true,
         params: true,
-        callback: 'paidBc',
+        callback: 'paidBcAll',
         ownerOnly: true,
         active: true
     },
